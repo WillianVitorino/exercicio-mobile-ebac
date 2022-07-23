@@ -13,8 +13,6 @@ describe('Acessar painel de login', () => {
         await formsPage.clickSwitch();
         await formsPage.selectItemDropdown(valueOne);
         await formsPage.clickActive();
-        await setTimeout(() => {
-            
-        }, 5000);     
+        await formsPage.assertMessageToast();     
     });
 });

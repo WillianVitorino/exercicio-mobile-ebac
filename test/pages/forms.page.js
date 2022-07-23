@@ -20,6 +20,10 @@ class FormsPage {
         return $('~button-Active');
     }
 
+    get messageToast(){
+        return $('id:message')
+    }
+
     async fillTypeSomething (text) {
         await this.fieldTypeSomething.setValue(text);
     }
@@ -38,6 +42,9 @@ class FormsPage {
     }
     async clickActive() {
         await this.buttonActive.click();
+    }
+    async assertMessageToast(){
+        await this.messageToast.isDisplayed();
     }
 }
 
