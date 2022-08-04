@@ -1,11 +1,19 @@
 class HomePage {
 
-    get buttonForms() {
-        return $('~Forms');
+    get buttonLoginStore() {
+        return $('id:button_login_store');
     }
 
-    async goToForms() {
-        await this.buttonForms.click();
+    get buttonContinueWordPress() {
+        return $('id:button_login_wpcom');
+    }
+
+    async goToLoginStore() {
+        await this.buttonLoginStore.click();
+    }
+
+    async goToLoginWordPress() {
+        await this.buttonContinueWordPress().click();
     }
 }
 
