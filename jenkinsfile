@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar repositório') {
+            steps {
+                git branch: 'main', url: 'https://github.com/WillianVitorino/exercicio-mobile-ebac'
+            }
+        }
+        stage('Instalar dependências') {
+            steps {
+                bat 'npm install'
+            }
+        }
+        stage('Executar testes') {
+            steps {
+                bat 'npm run wdio'
+            }
+        }
+    }
+}
