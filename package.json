@@ -13,11 +13,12 @@
         "wdio-wait-for": "^2.2.6"
     },
     "scripts": {
-        "wdio": "npx wdio run ./wdio.conf.js",
-        "test:ios": "npx wdio run ./wdio.ios.conf.js --suite products"
+        "test": "npx wdio run ./config/wdio.conf.js"
     },
     "dependencies": {
         "@wdio/browserstack-service": "^7.20.9",
-        "allure-commandline": "^2.18.1"
+        "allure-commandline": "^2.18.1",
+        "dotenv": "^16.0.3",
+        "wdio-video-reporter": "^3.2.3"
     }
 }
